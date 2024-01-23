@@ -1,0 +1,28 @@
+{
+  "name": "alexkarpan/reqsync-php",
+  "description": "A tool to sync the requirements between PHP source code and a requirements document.",
+  "type": "library",
+  "keywords": [
+    "requirements",
+    "reqsync"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Alexander Karpan",
+      "email": "a.karpan@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ReqSync\\": "ReqSync/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  },
+  "scripts": {
+    "sync": "php reqsync.php ReqSync software-requirements.md",
+    "test": "phpunit --bootstrap=\"vendor/autoload.php\" tests/"
+  }
+}
